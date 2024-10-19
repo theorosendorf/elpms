@@ -240,4 +240,5 @@ Route::post('logout')->name('logout')->uses('Auth\LoginController@logout')->midd
 Route::get('/accounts')->name('chooseAccount')->uses('Accounts\ChooseAccountController')->middleware('auth');
 
 // index
+Route::get('/')->name('index')->uses('Home\IndexController')->middleware(['auth']);
 Route::get('/{account}')->name('index')->uses('Home\IndexController')->middleware(['auth']);
